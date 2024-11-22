@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Galerija zadovoljnih korisnika</title>
+</head>
+<body>
+   <div class="container1">
+       
+    <h1>Galerija zadovoljnih korisnika</h1>
+    
+        <div class="image-container">
+            
+<div class="image"><img src="slike/slika1.jpg" alt=""></div>
+<div class="image"><img src="slike/slika2.jpg" alt=""></div>
+<div class="image"><img src="slike/slika3.jpg" alt=""></div>
+<div class="image"><img src="slike/slika4.jpg" alt=""></div>
+<div class="image"><img src="slike/slika5.jpg" alt=""></div>
+<div class="image"><img src="slike/slika6.jpg" alt=""></div>
+<div class="image"><img src="slike/slika7.jpg" alt=""></div>
+<div class="image"><img src="slike/slika8.png" alt=""></div>
+
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="slike/slika1.png" alt="">
+        </div>
+   </div> 
+   <script>
+       document.querySelectorAll('.image-container img').forEach(image=>{
+           image.onclick=()=>{
+           document.querySelector('.popup-image').style.display='block';
+           document.querySelector('.popup-image img').src=image.getAttribute('src');
+           }
+       });
+       document.querySelector('.popup-image span').onclick=()=>{
+        document.querySelector('.popup-image').style.display='none';
+
+       }
+   </script>
+  
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              li><a href="index.html">POČETNA STRANICA</a></li>
+              <li><a href="onama.html">O NAMA</a></li>
+              <li><a href="cjenik.html">CJENIK USLUGA</a></li>
+              <li><a href="galerija.html">GALERIJA ZADOVOLJNIH KORISNIKA</a></li>
+              <li><a href="kontakt.html">KONTAKT</a></li>
+              <li><a href="rezervacije.php">REZERVACIJE</a></li>
+              <li><a href="login.php">PRIJAVA</a></li>
+  <li><a href="register.php">REGISTRACIJA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+  </body>
+  </html>

@@ -1,0 +1,995 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+#pozadina{
+background:linear-gradient(rgba(0,0,0,0.5),#141d1c),url(slike/friz.png);
+ background-size:cover;
+ background-position:center;
+height: 100%;
+}
+.pozadina-tekst{
+  text-align:center;
+  color: #fff;
+  padding-top:0%;
+}
+
+.pozadina-tekst h1{
+  font-size: 90px;
+  font-family: 'Kaushan Script', cursive;
+  margin-top:5%;
+
+}
+.pozadina-tekst p{
+  color: white;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-family: 'Kaushan Script', cursive;
+
+}
+.pozadina-tekst p1{
+  color: white;
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: 'Kaushan Script', cursive;
+
+}
+.pozadina-tekst img{
+  width:170;
+  padding-top:2%;
+  padding-bottom: 1%;
+  
+}
+.gumb{
+  margin-left:8%;
+  padding-top: 3%;
+
+}
+.gumb a{
+
+  width: 130x;
+  text-decoration: none;
+  display: inline-block;
+  margin:2%;
+  padding:1% 2%;
+  color:#fff;
+  border: 3px solid #fff;
+  text-align:center ;
+  font-size: 18px;
+  font-style: italic,bold;
+}
+  
+
+@media screen and (max-width: 770px){
+  .gumb{
+    margin-right:19%;
+  }
+  .gumb a{
+    display:block;
+margin:2% ;
+margin-left:18%;
+font-size: 15px;
+
+}
+.pozadina-tekst h1{
+  font-size: 30px;
+  margin-top: 20%;
+
+}
+.pozadina-tekst p{
+  font-size: 15px;
+  margin-top: 5%;
+}
+.pozadina-tekst p1{
+  font-size: 13px;
+  font-family: 'Kaushan Script', cursive;
+
+}
+}
+.title-text{
+  text-align: center;
+  padding-bottom: 100px;
+  color:#fff;
+
+}
+
+.title-text h1{
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+
+}
+
+.title-text{
+    text-align: center;
+    padding-bottom: 100px;
+    color:#fff;
+
+}
+
+.title-text h1{
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+
+}
+
+/*GALERIJA*/
+
+.container1{
+    position:auto;
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.5),#141d1c),url(slike/pod.png);
+
+}
+.container1 h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-top: 28px;
+  font-family: 'Kaushan Script', cursive;
+}
+.container1 .image-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content: center;
+    padding:10px;
+    margin-top: 50px;
+}
+.container1 .image-container .image{
+    height:250px;
+    width:350px;
+    border:3px solid #fff;
+    overflow:hidden;
+    cursor:pointer;
+}
+.container1 .image-container .image img{
+height:100%;
+width:100%;
+object-fit:cover;
+transition:.2s linear;
+
+}
+.container1 .image-container .image:hover img{
+transform: scale(1.1);
+}
+.container1 .popup-image{
+position:fixed;
+   top:0; left:0;
+    background: rgba(0,0,0,.9);
+height:100%;
+width:100%;
+z-index:100;
+display:none;
+}
+.container1 .popup-image span{
+    position: absolute;
+    top:0;
+    right:10px;
+    font-size:60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor:pointer;
+    z-index:100;
+}
+.container1 .popup-image img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:5px solid #fff;
+    border-radius:5px;
+    width:35%;
+    object-fit: cover;
+}
+@media (max-width:768px){
+    .container1 .popup-image img{
+        width:80%;
+    }
+    .container1 .image-container .image{
+      height:15%;
+      width:25%;
+      border:3px solid #fff;
+      overflow:hidden;
+      cursor:pointer;
+      
+  }
+  .container1 h1{
+    text-align: center;
+    color: white;
+    font-size:23px;
+    text-transform: capitalize;
+    margin-top: 20%;
+    font-family: 'Kaushan Script', cursive;
+  }
+  .container1 .image-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content: center;
+    padding:10px;
+    margin-top: 20%;
+}
+}
+
+/*USLUGE*/
+
+#usluges{
+  background:linear-gradient(rgba(0,0,0,0.5),#141d1c),url(slike/pod.png);
+
+}
+.usluge{
+    width: 100%;
+    padding: 50px 0;
+
+}
+
+.usluga-font{
+  text-align: center;
+  color: white;
+  font-size: 38px;
+  margin-top: 20px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.usluga-font h3{
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color:#fff;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.podjela{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+
+.jednaUsluga{
+    flex-basis:48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    border: 3px solid #fff;
+}
+
+.jednaUsluga img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+
+.jednaUsluga:hover .overlay{
+opacity: 1;
+}
+
+.opisUsluge{
+    width: 80;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.opisUsluge h2{
+    font-size: 14px;
+}
+
+.jednaUsluga:hover .opisUsluge{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px){
+    .jednaUsluga{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .opisUsluge h2{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .jednaUsluga:hover .opisUsluge{
+        bottom: 25% !important;
+    }
+    .usluga-font{
+      text-align: center;
+      color: white;
+      font-size: 19px;
+      margin-top: 20%;
+      text-transform: capitalize;
+      margin-bottom: 5px;
+      font-family: 'Kaushan Script', cursive;
+    }
+    .usluga-font h3{
+      text-align: center;
+      padding-bottom: 20px;
+      font-size: px;
+      color:#fff;
+      font-family: 'Kaushan Script', cursive;
+    }
+}
+
+/*O NAMA*/
+
+.oNama{
+    width: 100%;
+    padding: 78px, 0px;
+    background:linear-gradient(rgba(0,0,0,0.5),#141d1c),url(slike/pod.png);
+    height: 100vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.oNama img{
+    height: auto;
+    width: 420px;
+    padding-top: 150px;
+}
+
+.oNama-tekst{
+    width: 550px;
+}
+
+.oNama-tekst h1{
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.oNama-tekst h5{
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.oNama-tekst p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.centriranje{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: #009688;
+}
+
+button{
+    background:#009688;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+button:hover{
+    background: transparent;
+    border: 2px solid #009688;
+    cursor: pointer;
+}
+@media screen and (max-width: 770px){
+  .centriranje img{
+    width:40%;
+    position: absolute;
+    bottom:0;
+    left:30%;
+  }
+.oNama-tekst p{
+font-size:8px;
+width: 280px;
+line-height: 200%;
+text-align: justify;
+margin-left: 10%;
+margin-bottom: 19px;
+}
+.oNama-tekst h1{
+  font-size:24px;
+margin-top: 20%;
+text-align: center;
+
+}
+.oNama-tekst h5{
+  margin-left: 5%;
+font-size:13px;
+text-align: center;
+}
+.oNama{
+  
+width: 30%;
+}
+button{
+  margin-bottom:20%;
+  font-size: 7px;
+  height: 20px;
+ width: 30%;
+ margin-left: 38%;
+    background:#009688;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 2px 20px;
+    border-radius: 30px;
+    transition: .4s;
+    font-family: 'Kaushan Script', cursive;
+}
+
+}
+/*ovo je izbornik*/
+
+:root {
+  --overlay-color: rgba(7, 10, 12, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kaushan Script', cursive;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: '';
+  background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 8%;
+  left: 90%;
+  z-index: 3;
+  margin-left: 2%;
+}
+@media screen and (max-width: 770px){
+.menu-wrap{
+left:75%;
+top:2%;
+}
+}
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 80px;
+  height: 40px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 3px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/*KONTAKT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	height: 100vh;
+	display: grid;
+	align-items: center;
+  font-family: 'Kaushan Script', cursive;
+  background:linear-gradient(rgba(0,0,0,0.5),#141d1c),url(slike/pod.png);
+
+}
+
+.kontakt-font{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  padding-bottom: 40px;
+  margin-top: -90px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact-wrap {
+	width: 80%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact-in {
+	padding: 40px 30px;
+  font-family: 'Kaushan Script', cursive;
+
+}
+
+.contact-in:nth-child(1) {
+	flex: 30%;
+	color: #fff;
+  margin-top: 60px;
+}
+
+.contact-in:nth-child(2) {
+	flex: 45%;
+  
+}
+
+.contact-in:nth-child(3) {
+	flex: 25%;
+	padding: 0;
+
+}
+
+.contact-in h1 {
+	font-size: 30px;
+	color: #fff;
+	font-weight: 500;
+	margin-bottom: 20px;
+  font-family: 'Kaushan Script', cursive;
+  
+}
+
+.contact-in h2 {
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+
+.contact-in h2 i {
+	font-size: 16px;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	background: #f5f5f5;
+	color: #000;
+	border-radius: 50px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.contact-in p {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+.contact-in ul {
+	padding: 0;
+	margin: 0;
+}
+
+.contact-in ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.contact-in ul li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background: #fff;
+	border-radius: 50px;
+}
+
+.contact-in ul li a i {
+	font-size: 14px;
+	line-height: 30px;
+	color: #000;
+}
+
+.contact-in form {
+	width: 80%;
+	height: auto;
+}
+
+.contact-in-input {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	border: 1px solid #fff;
+	outline: none;
+	padding-left: 5px;
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact-in-input::placeholder {
+	color: #fff;
+}
+
+.contact-in-textarea {
+	width: 100%;
+	height: 140px;
+	margin-bottom: 20px;
+	border: 1px solid #fff;
+	outline: none;
+	padding-top: 5px;
+	padding-left: 5px;
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact-in-textarea::placeholder {
+	color: #fff;
+}
+.message {
+  color: white;
+}
+.contact-in-btn {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #fff;
+	outline: none;
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+  font-family: 'Kaushan Script', cursive;
+	cursor: pointer;
+}
+
+.contact-in iframe {
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width:480px) {
+	.contact-in:nth-child(1) {
+		flex: 50%;
+	}
+
+	.contact-in:nth-child(2) {
+		flex: 50%;
+	}
+
+	.contact-in:nth-child(3) {
+		flex: 100%;
+	}
+  .contact-in h2{
+    margin-left: 10%;
+
+  }
+  .contact-in p{
+    margin-left: 10%;
+
+  }
+  .contact-in ul{
+    margin-left: 10%;
+  }
+.contact-in h1 {
+font-size: 20px;
+}
+.kontakt-font h1{
+  margin-top:45%;
+  font-size: 35px;
+}
+.contact-wrap{
+margin-top: -60px;
+}
+.contact-in iframe {
+	width: 100%;
+	height: 134s;}
+  .contact-in form{
+    margin-left: 10%;
+  }
+  .contact-in h1{
+    margin-left: 10%;
+  }
+}
+@media only screen and (max-width:360px) {
+	.contact-in:nth-child(1) {
+		flex: 50%;
+	}
+
+	.contact-in:nth-child(2) {
+		flex: 50%;
+	}
+
+	.contact-in:nth-child(3) {
+		flex: 100%;
+	}
+
+}
+.rezer h1,legend,label{
+color:white;
+margin-bottom:20px;
+}
+
+.konj{
+  margin-left: 150px;
+}
+
+.konjina label{
+  font-size:30px;
+}
+.konj label{
+  font-size: 30px;
+}
+.rezer{
+  display:flex;
+  padding-left: 400px;
+
+}
+.rezer h1{
+  font-size: 23pt;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.radio rad{
+  background-color: red;
+}
+.urpInput{
+  font-size: 20px;
+}
+.rezer{
+  padding-left: 200px;
+}
+.prvw{
+  background:#009688;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 35px;
+  border-radius: 30px;
+  transition: .4s;
+  font-family: 'Kaushan Script', cursive;
+  margin-left: 28%;
+  
+}
+.prvw:hover{
+  background: transparent;
+    border: 2px solid #009688;
+    cursor: pointer;
+}
+table td{
+  color:#f7f7fc;
+}
+
+@media screen and (max-width: 770px){
+table tr{
+ margin-top:100%;
+
+}
+}

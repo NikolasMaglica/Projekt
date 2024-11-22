@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Kontakt</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <script>
+        async function getWeather() {
+            const apiKey = "69ce64f1f698a924cced736752cf3335"; 
+            const city = "Zagreb"; 
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=hr`;
+
+            try {
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`Greška: ${response.status} ${response.statusText}`);
+                }
+
+                const data = await response.json();
+
+                // Prikazivanje podataka o vremenu
+                document.getElementById("weather").innerHTML = `
+                    <h2><i class="fa fa-cloud" aria-hidden="true"></i> Vrijeme</h2>
+                    <p>Temperatura: ${data.main.temp}°C</p>
+                    <p>Osjećaj: ${data.main.feels_like}°C</p>
+                    <p>Opis: ${data.weather[0].description}</p>
+                `;
+            } catch (error) {
+                console.error("Greška pri dohvaćanju podataka:", error);
+                document.getElementById("weather").innerHTML = `
+                    <p style="color: red;">Nije moguće dohvatiti podatke o vremenu: ${error.message}</p>
+                `;
+            }
+        }
+    </script>
+</head>
+<body onload="getWeather()">
+    <section id="kontakt">
+        <div class="kontakt-font">
+            <h1>Kontakt</h1>
+        </div>
+        <div class="contact-wrap">
+            <div class="contact-in">
+                <h2><i class="fa fa-phone" aria-hidden="true"></i> Telefon</h2>
+                <p>091-601/4332</p>
+                <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+                <p>frizerski.mm@gmail.com</p>
+                <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Adresa</h2>
+                <p>Vrbik 8, 10 000 Zagreb</p>
+                <h2><i class="fa fa-clock-o" aria-hidden="true"></i> Radno vrijeme</h2>
+                <p>PON - PET (8.00h - 14.00h)<br></p>
+                <div id="weather">
+                    <p>Učitavam podatke o vremenu...</p>
+                </div>
+                <ul>
+                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://google.com/gmail"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                    <li><a href="https://instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="contact-in">
+                <h1>Pošalji nam poruku:</h1>
+                <form>
+                    <input type="text" placeholder="Ime i prezime" class="contact-in-input">
+                    <input type="text" placeholder="Email" class="contact-in-input">
+                    <input type="text" placeholder="Naslov" class="contact-in-input">
+                    <textarea placeholder="Poruka" class="contact-in-textarea"></textarea>
+                    <input type="submit" value="Pošalji" class="contact-in-btn">
+                </form>
+            </div>
+            <div class="contact-in">
+				<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.823643254691!2d15.977316015625912!3d45.80115207910637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d3ee2d9bc481%3A0xb5b5c4e8c7ac82f7!2sVrbik%208%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1694523454567!5m2!1shr!2shr" 
+				width="600" 
+				height="450" 
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy">
+			</iframe>
+						</div>
+        </div>
+    </section>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">POČETNA STRANICA</a></li>
+                        <li><a href="onama.html">O NAMA</a></li>
+                        <li><a href="cjenik.html">CJENIK USLUGA</a></li>
+                        <li><a href="galerija.html">GALERIJA ZADOVOLJNIH KORISNIKA</a></li>
+                        <li><a href="kontakt.html">KONTAKT</a></li>
+                        <li><a href="rezervacije.php">REZERVACIJE</a></li>
+                        <li><a href="login.php">PRIJAVA</a></li>
+						<li><a href="register.php">REGISTRACIJA</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
